@@ -14,6 +14,19 @@ export default {
         zinc: "#101010",
       },
     },
+    plugins: [
+      function ({ addUtilities }) {
+        addUtilities(
+          {
+            ".text-shadow": {
+              textShadow:
+                "1px 1px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8)",
+            },
+          },
+          ["responsive", "hover"]
+        );
+      },
+    ],
   },
   plugins: [],
 };
